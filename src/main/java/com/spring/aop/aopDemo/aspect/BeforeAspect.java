@@ -56,6 +56,8 @@ public class BeforeAspect {
         logger.info("using within....");
     }
 
+
+    // EXECUTES BEFORE AND AFTER THE METHOD
     @Around(value = "@annotation(com.spring.aop.aopDemo.aspect.TrackTime)")
     public void aroundAnnotation(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime=System.currentTimeMillis();
